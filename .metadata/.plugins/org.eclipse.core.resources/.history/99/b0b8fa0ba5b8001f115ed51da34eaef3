@@ -1,0 +1,32 @@
+package sweetoperations;
+
+import java.util.Scanner;
+
+public class crudoperations {
+	public static void main(String[] args) {
+		Scanner scr=new Scanner(System.in);
+		int ch;
+		do {
+			getdetails();
+			ch=Integer.parseInt(scr.next());
+		}
+		while(ch>0);
+	}
+
+	private static void getdetails() {
+		System.out.println("Sweet Operations");
+		System.out.println("________________");
+		System.out.println("Choose an Option");
+		System.out.println("\t 1.login");
+		System.out.println("\t 2.registration");
+		System.out.println("\t 3.adduser");
+		System.out.println("\t 4.deleteuser");
+		System.out.println("\t 5.modifyuserdetails");
+		System.out.println("\t 6.getalluserdetails");
+		System.out.println("\t 7.getuserdetailbyemails");
+		System.out.println("\t 8.exit");
+		System.out.println("___________________");
+		
+	}
+
+}

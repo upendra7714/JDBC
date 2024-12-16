@@ -1,0 +1,23 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class createdatabase {
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "root");
+			String sql = "create database registration";
+			PreparedStatement pmst=conn.prepareStatement(sql);
+			pmst.executeUpdate();
+			pmst.close();
+			conn.close();
+			System.out.println("created a database");
+			} catch (Exception e) {
+			System.out.println("error");
+		}
+	}
+
+}

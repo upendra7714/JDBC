@@ -1,0 +1,22 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class creatingdatabase {
+    public static void main(String[] args) {
+    	try {
+			
+    		Class.forName("");
+    		Connection conn=DriverManager.getConnection(null, null, null);
+    		PreparedStatement pmst=conn.prepareStatement(null);
+    		pmst.executeUpdate();
+    		conn.close();
+    		pmst.close();
+		} catch (Exception e) {
+			System.out.println("error");
+		}
+	 
+	}
+}
